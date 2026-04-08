@@ -42,6 +42,14 @@ public class RestaurantController {
         return restaurantService.fetchRestaurantById(id);
     }
 
+
+    @GetMapping("/check")
+    public String getName() {
+        return "siva";
+    }
+
+
+
     //commnet 1
 
     //comment 2
