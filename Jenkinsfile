@@ -101,7 +101,7 @@ pipeline {
           echo "Checking out GitOps repository..."
           checkout scmGit(branches: [[name: '*/master']],
                           extensions: [],
-                          userRemoteConfigs: [[ credentialsId: 'git-ssh',
+                          userRemoteConfigs: [[ credentialsId: 'ssh-privatekey',
                                                 url: 'git@github.com:ReactJava1918/deployment-folder-master.git']])
 
           echo "Updating image tag in aws/restaurant-manifest.yml to version ${VERSION}..."
