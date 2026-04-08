@@ -37,6 +37,14 @@ public class RestaurantController {
        return restaurantService.fetchRestaurantById(id);
     }
 
+    @GetMapping("fetchById/name")
+    public ResponseEntity<RestaurantDTO> findRestaurantByName(@PathVariable Integer id) {
+        return restaurantService.fetchRestaurantById(id);
+    }
+
+    //commnet 1
+
+    //comment 2
 
 
 

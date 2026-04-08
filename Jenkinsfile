@@ -114,7 +114,7 @@ pipeline {
           sh 'git add .'
           sh 'git commit -m "Update image tag to ${VERSION}" || echo "No changes to commit"'
 
-          sshagent(['git-ssh']) {
+          sshagent(['ssh-privatekey']) {
               sh 'git push'
           }
 
